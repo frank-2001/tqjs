@@ -26,7 +26,7 @@
 },
 {
     "name":"icons",
-    "page":"src/heroicons/index.html",
+    "page":"src/heroicons/heroicons.html",
     "content":""
 }
 ]
