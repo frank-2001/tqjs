@@ -1,0 +1,32 @@
+[{
+    "name":"home",
+    "page":"index.html",
+    "content":""
+},
+{
+    "name":"documentation",
+    "page":"doc.html",
+    "content":""
+},
+{
+    "name":"page2",
+    "page":"page2.html",
+    "content":""
+},
+{
+    "name":"404",
+    "page":"404.html",
+    "content":""
+}
+,
+{
+    "name":"loading",
+    "page":"loading.html",
+    "content":""
+},
+{
+    "name":"icons",
+    "page":"src/heroicons/index.html",
+    "content":""
+}
+]

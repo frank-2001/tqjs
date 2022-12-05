@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TQjs</title>
+    <script src="src/jquery.min.js"></script>
+    <script src="src/tq.js"></script>
+</head>
+<body>
+    <section class="overflow-hidden bg-blue-100 h-screen text-white w-screen backdrop-blur-lg">
+                <!-- Menu mobile -->
+                <div id="menu" class="fixed h-full w-full grid grid-cols-1 justify-evenly backdrop-blur-md   w-full sm:hidden px-4 py-4 mob-menu" style="z-index: 100;">
+                    <!-- <div class=" text-sm py-5  px-20 font-bold" > -->
+                        <div class="grid text-center items-center place-items-center mb-5 w-full font-bold text-lg" >
+                            <!-- <span class="text-md">Menu</span> -->
+                            <svg onclick="menufx()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="w-12 h-12 rounded-full bg-red-600 animate-bounce">
+                                <path fill-rule="evenodd"
+                                    d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="grid gap-1 place-items-center text-center font-bold md:text-lg text-md">
+                            <span class="bg-blue-600 w-full rounded-md px-2 py-2" onclick="return goto('404')">Blog</span>
+                            <span class="bg-blue-600 w-full rounded-md px-2 py-2" onclick="return goto('404')">Exemples</span>
+                            <span class="bg-blue-600 w-full rounded-md px-2 py-2" onclick="return goto('documentation')">Documentation</span>
+                            <!-- <span class="bg-blue-600 w-full rounded-md px-2 py-2" onclick="return goto('cv')">Mon cv</span> -->
+                        </div>
+                        <div class="grid place-items-center text-black">
+                            <span>&copy; TQjs 2022</span>
+                        </div>
+                </div>
+        <header class="bg-black bg-opacity-60 md:px-10 px-2 col-span-2 m-0 border-b flex justify-between items-center border-b w-full">
+            <span class="text-lg md:p-5 p-2 font-black border-l text-left rounded-full">
+                TQjs
+            </span>
+            
+            <div class="hidden text-sm md:flex justify-between gap-10">
+                <span class="border-b" onclick="return goto('404')">Blog</span>
+                <span class="" onclick="return goto('404')">Exemples</span>
+                <span class="" onclick="goto('documentation')">Documentation</span>
+            </div>
+            <svg onclick="menufx()"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 md:hidden">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+              
+              
+        </header>
+        <div class="h-full  grid md:px-10 place-items-center">
+
+            <div class="grid  grid-cols-2 gap-20  text-gray-800 text-left  px-5 backdrop-blur-md">
+                
+                <!-- <span class="hidden md:block col-span-2"></span> -->
+                <!-- <span></span> -->
+                <div class="md:grid-rows-4 col-span-2 md:col-span-1  items-center">
+                    <div class="mb-10">
+                        TQjs est un Framework basé sur <a href="https://jquery.com" target="_blank" class="text-blue-400 font-bold border-b">Jquery</a> une bibliotheque de <span class="text-blue-400 border-b font-bold">Javascript</span>, 
+                        une fois installé dans votre project (site web ou application) web TQjs ameliore son experience utilisateur, en eliminant les rechargements des pages lors des navigations dans votre site et met a votre disposition des composants pres ecrit et ainsi TQjs booste votre vitesse de developpement
+                        <br>      
+                        Avec TQjs toutes vos pages sont chargées au lancement du site de n'importe quelle page,<br>
+                        TQjs, Integre automatiquement <a href="https://tailwindcss.com/" target="_blank" class="text-blue-400 font-bold border-b">Tailwind</a> un framework css, des <span onclick="return goto('icons')" class="text-blue-400 font-bold border-b">icons</span>  en SVG, mais aussi des composants html,css et Js pres ecrit
+                </div>
+                    <div class="flex justify-between">
+                        <span class="text-white bg-blue-900 px-3 py-2 rounded-md" onclick="return goto('documentation')">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                              </svg>
+                              
+                            Documentation
+                        </span>
+
+                        <span class="text-white bg-blue-400 px-3 py-2 rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                              </svg>
+                              
+                            Telecharger
+                        </span>
+                        
+                    </div>
+                    
+                </div>
+                        
+                    <div class="hidden md:block">
+                        <span class="md:grid justify-items-center col-span-2 hidden text-5xl  font-black py-2 text-center rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-25 animate-bounce">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                            </svg>
+                              
+                        </span> 
+                    </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var menu=false
+        function menufx() {
+                if (menu) {
+                $("#menu").show()
+                menu=false
+            } else {
+                    menu=true
+                    $("#menu").hide()
+            }
+        }        
+        menufx()
+    </script>
+</body>
+</html>

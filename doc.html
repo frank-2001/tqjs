@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <script src="../src/jquery.min.js"></script>
+    <script src="../src/tq.js"></script>
+</head>
+<body>
+    
+    <section class="text-gray-600 bg-blue-100">
+        <div class="tq-head"></div>
+        <!-- <span class="text-xl font-bold">Documentation</span> -->
+        <div class="grid md:grid-cols-4 grid-cols-1 py-5 md:px-10 px-5 ">
+            <div>
+                <div class="md:fixed">
+                    <!-- <span>MENU</span> -->
+                    <li>
+                        <a href="#intro" class="text-blue-400 font-bold border-b">Introduction</a>
+                    </li>
+                    <li>
+                        <a href="#install" class="text-blue-400 font-bold border-b">Installation</a>
+                    </li>
+                    <li>
+                        <a href="#tail" class="text-blue-400 font-bold border-b">Tailwind</a>
+                    </li>
+                    <li>
+                        <a href="#icons" class="text-blue-400 font-bold border-b">Icons SVG</a>
+                    </li>
+                    <li>
+                        <a href="#elt" class="text-blue-400 font-bold border-b">Composent</a>
+                    </li>
+                </div>
+            </div>
+            <div class="overflow col-span-3 grid gap-4">
+                <div class="" id="intro">
+                    <h2 class="font-bold">Introduction</h2>
+                    TQjs est un Framework basé sur <span class="text-blue-400 font-bold border-b">Jquery</span> une bibliotheque de <span class="text-blue-400 border-b font-bold">Javascript</span>, 
+                    <br>Une fois installé dans votre site web ou application web TQjs ameliore son experience utilisateur, en eliminant les rechargements des pages lors des navigations dans votre site et met a votre disposition des composants pres ecrit et ainsi TQjs booste votre vitesse de developpement
+                    <br>      
+                    Avec TQjs toutes vos pages sont chargées au lancement du site de n'importe quelle page,<br>
+                    TQjs, Integre automatiquement <a href="https://tailwindcss.com/" target="_blank" class="text-blue-400 font-bold border-b">Tailwind</a> un framework css, avec des <span onclick="return goto('icons')" class="text-blue-400 font-bold border-b">icons</span>  en SVG
+                </div>
+
+                <div id="install">
+                    <h2 class="font-bold">Installation</h2>
+                    <!-- Le script TQjs depend du framework Jquery et donc du langage de programmation Javascript,<br> -->
+                    <li>
+                        Installer <a href="https://python.org" class="text-blue-400 font-bold border-b" target="_blank" rel="noopener noreferrer">python</a>, Le script se sert d'un serveur python pour parfaitement simmuler l'execution de votre site ou application sur un serveur distant
+                    </li>
+                    <li>
+                        <span class="text-blue-400 font-bold border-b"> Telecharger le projet TQjs </span>, dans le project vous trouverez :  
+                        <div class="ml-10">
+                            *<span class="text-blue-400 font-bold border-b">src</span> : ce repertoire contient TQjs (Ne modifie rien a l'interieur)
+                            <br>*<span class="text-blue-400 font-bold border-b">pages.json</span> : il liste vos pages dans cette forme <p class="text-blue-500">[{"name":"nom de la page (home)","page":"adresse de la page (index.html)","content":""}]</p>
+                            ainsi vous devez lister toutes vos page a l'interieur 
+                            <br>
+                            *<span class="text-blue-400 font-bold border-b">setup.py</span> : script python du serveur <br>
+                            *<span class="text-blue-400 font-bold border-b">run.bat</span> : Lanceur du serveur, apres un clique dessus il lancera le serveur et ouvrira automatiquement votre projet dans le navigateur <br>
+                            *<span class="text-blue-400 font-bold border-b">*.html</span> : tous vos fichier html doivent importer jquery.min.js et tq.js dans le repertoire src.
+                        </div>
+                    </li>
+                </div>
+                <div id="tail">
+                    <h2 class="font-bold">Tailwind</h2>
+                    Est un framework integr pour styliser votre site web <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" class="text-blue-400 font-bold border-b">savoir plus</a> 
+                </div>
+                <div id="icons">
+                    <h2 class="font-bold">Icons</h2>
+                    TQjs met a votre disposition une gamme des icons en svg persolisable avec tailwind <span class="text-blue-400 font-bold border-b" onclick="return goto('icons')">Explorer</span> 
+                </div>
+
+                <div id="elt">
+                    <h2 class="font-bold">Composants</h2>
+                    TQjs met a votre disposition un bon nombre des composants html,css et Javascript qui n'attendent qu'a etre appele <br>
+                    Exemple: <br>
+                    *<span class="text-blue-400"> .tq-head </span> : une classe pour inserer un entete compose du nom de la page et un bouton retour
+                </div>
+
+            </div>
+        </div>
+        
+    </section>
+</body>
+</html>
