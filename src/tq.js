@@ -5,24 +5,6 @@ const tailwind=document.createElement("script")
 tailwind.src="src/tailwind.js"
 $("head").append(tailwind);
 
-const script=document.createElement("script")
-script.src="src/component.js"
-// $("body").get()
-// console.log($("body").val()==undefined);
-function component() {
-    if ($("body").val()==undefined) {
-        setTimeout(() => {
-            component()
-        }, 200);
-    } else {
-        $("body").append(script)    
-    }
-}
-component()
-// setTimeout(() => {
-// }, 200);
-
-
 //Default Pages
 var loading
 var notfound
@@ -47,14 +29,31 @@ $.get("pages.json",(data)=>{
     // console.log(pages);
 })
 
+//Component
+var components
+function component() {
+    if ($("body").val()==undefined) {
+        setTimeout(() => {
+            component()
+        }, 200);
+    } else {
+        $("body").append(components)    
+    }
+}
+$.get("src/component.js",(data)=>{
+    components="<script>"+data+"</script>"
+}).done(()=>{
+    component()
+})
+
 
 setTimeout(() => {
     $("#loading").html(pages);
 }, 200);
 var page_name=""
 function goto(page) {
-    page_name=page
     $("body").html(loading);
+    page_name=page
     var page_found=false
     if (page=="") {
         page="home"
@@ -62,7 +61,7 @@ function goto(page) {
     pages.forEach(element => {
         if (element.name==page) {
             $("body").html(element.content);
-            $("body").append(script)
+            $("body").append(components)    
             window.history.pushState(null,null,element.page)
             $("head title").text(page.toUpperCase());
             page_found=true
